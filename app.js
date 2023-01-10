@@ -1,7 +1,10 @@
 const express = require("express");
+const morgan = require("morgan")
 const app = express();
 
-app.get("/", (req, res) => res.send("Hello World!"));
+app.use(morgan('dev'));
+
+app.get("/", (req, res) => res.send("Hokus Pokus!"));
 
 const PORT = 1337;
 
